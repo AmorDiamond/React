@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@ui/*": ["./src/framework/ui/*"],
+      "@component/*": ["./src/framework/component/*"],
+    },
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve",
+    "experimentalDecorators": true,
+    "noUnusedLocals": false,
+    "strictNullChecks": true,
+    "noImplicitAny": false,  
+    "strictPropertyInitialization": false
+  },
+  "include": [
+    "src", "src/pages/BaseDataManage/GoodsClassifyManage/ClassifyDetails/component/.tsx"
+  ]
+}

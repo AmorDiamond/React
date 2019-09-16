@@ -1,0 +1,58 @@
+.detail-component {
+  .ant-row,
+  .ant-row-flex {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+
+  .detail-item {
+    display: flex;
+    margin-bottom: 5px;
+    .ant-col {
+      display: inline-block;
+    }
+    .ant-form-item-label {
+      width: 120px;
+      text-align: right;
+    }
+    .ant-form-item-control-wrapper {
+      width: 1px;
+      flex: 1 0 auto;
+    }
+    .ant-select {
+      min-width: 100%;
+    }
+    .ant-form-item-control {
+      width: 100%;
+      line-height: 40px;
+      .ant-form-explain {
+        margin-bottom: -1px;
+        position: absolute;
+        font-size: 13px;
+      }
+      .ant-calendar-picker {
+        min-width: 100%;
+      }
+    }
+    .content-warp {
+      padding-right: 10px;
+    }
+  }
+
+  // .text-item {
+  //   .content-warp {
+  //     margin-top: 10px;
+  //     line-height: 20px;
+  //   }
+  // }
+  .ellipsis-item {
+    .ant-form-item-control {
+      width: 100%;
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
+// }

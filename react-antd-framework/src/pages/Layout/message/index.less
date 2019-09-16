@@ -1,0 +1,36 @@
+.order-message-warpper {
+  position: fixed;
+  background: #fff;
+
+  border-radius: 3px;
+
+  right: 30px;
+  bottom: 10px;
+  z-index: 200;
+
+  .msg-logo {
+    width: 30px;
+    height: 100%;
+    font-size: 20px;
+  }
+
+  .order-message-title {
+    display: none;
+    font-size: 30px;
+  }
+
+  .order-message-content {
+    display: block;
+  }
+  
+  &:hover {
+    border: 1px solid #ccc;
+    padding: 10px;
+    .ant-badge {
+      display: none;
+    }
+    .order-message-content {
+      display: block;
+    }
+  }
+}

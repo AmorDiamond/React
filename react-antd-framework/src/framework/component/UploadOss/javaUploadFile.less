@@ -1,0 +1,47 @@
+.jave-flie-upload {
+  .upload-label {
+    cursor: pointer;
+    padding: 6px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .disabeld-upload {
+    cursor: not-allowed;
+    color: #ccc;
+  }
+  .tip-msg {
+    // height: 20px;
+    line-height: 20px;
+    color: @warning-color;
+    font-size: 12px;
+  }
+  .img-con {
+    position: relative;
+    width: 90px;
+    height: 110px;
+    padding: 5px;
+    border: 1px solid #e1e1e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 80px;
+      max-height: 100px;
+    }
+    .img-cover {
+      display: none;
+      background: rgba(0, 0, 0, 0.15);
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+    &:hover {
+      .img-cover {
+        display: block;
+      }
+    }
+  }
+}

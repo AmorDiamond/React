@@ -1,0 +1,166 @@
+@import "../../../styles/variables.less";
+
+.public-table {
+  color: #5a5a5a;
+  .ant-table-content {
+    font-size: @font-size-small;
+    // border: @base-border;
+    background-color: #fff;
+  }
+  .ant-table-thead {
+    & > tr > th {
+      background-color: #f8f8f8;
+      font-size: 14px;
+    }
+  }
+  .ant-table-row {
+    cursor: pointer;
+    .min-width-100{
+      min-width: 100px;
+    }
+    .table-btn {
+      height: auto;
+      font-size: 12px;
+      margin-right: 10px;
+      padding: 3px 10px;
+
+      display: inline-block;
+      background: @gary-bg-color;
+      color: @primary-color;
+
+      &:nth-last-child(1) {
+        margin-right: 0px;
+      }
+    }
+    .success-btn {
+      background: @gary-bg-color;
+      color: @success-color;
+    }
+    .danger-btn {
+      background: @gary-bg-color;
+      color: @danger-color;
+    }
+    .disabled-btn {
+      background: @white-darker;
+      color: @gray-lighter;
+    }
+    .op-warpper {
+      white-space: nowrap;
+    }
+  }
+
+  .td {
+    width: 500px;
+    height: 60px;
+    background: #eee;
+  }
+  .avatar-td {
+    position: relative;
+    color: #fff;
+    font-weight: 600;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    background: #868e96 no-repeat;
+
+    &::after {
+      content: "";
+      border-radius: 50%;
+      display: block;
+      background: #28a745;
+      position: absolute;
+      right: -2px;
+      bottom: -2px;
+      width: 11px;
+      height: 11px;
+      border: 2px solid #fff;
+    }
+  }
+
+  .line-progress-td {
+    width: 80%;
+    .td-info {
+      font-size: 15px;
+      color: #5a5a5a;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .td-info-left {
+      font-weight: 800;
+    }
+    .td-info-right {
+      display: flex;
+      font-size: 80%;
+      color: #5a5a5a;
+    }
+    .td-progress {
+      width: 100%;
+      height: 5px;
+      border-radius: 10px;
+      background: #e1e1e1;
+      overflow: hidden;
+    }
+    .progress-bar {
+      border-radius: 10px;
+      background: #28a745;
+      height: 5px;
+    }
+  }
+
+  .normal-td {
+    text-align: left;
+    .main-title {
+      font-size: 15px;
+    }
+    .sub-title {
+      font-size: 13px;
+      color: #6c757d;
+    }
+  }
+
+  .circle-progress-td {
+    position: relative;
+    width: 40px;
+    height: 40px;
+
+    .circle-info {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      line-height: 40px;
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+
+  //重写publictable的下拉按钮
+  .ant-dropdown {
+    .public-table-btn .ant-dropdown-menu-item {
+      
+      font-size: @font-size-small;
+      text-align: center;
+    }
+  }
+}
+
+.table-other-btn {
+  .ant-dropdown-menu-item{
+    padding: 0;
+  }
+  .ant-btn {
+    display: block;
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+
+    border: none;
+    font-size: 12px;
+    display: block;
+    background: transparent;
+  }
+}
