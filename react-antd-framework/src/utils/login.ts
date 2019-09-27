@@ -273,6 +273,18 @@ export const loginInfo: any = {
               url: null,
               webUrl: null,
               items: []
+            },
+            {
+              application: "example",
+              type: "INNER_LINK",
+              text: "继承检索页面",
+              customId: "example_page_extendsList",
+              icon: "fa fa-list",
+              orderIndex: 0,
+              link: null,
+              url: null,
+              webUrl: null,
+              items: []
             }
           ]
         }

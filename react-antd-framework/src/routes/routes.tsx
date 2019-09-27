@@ -116,6 +116,13 @@ const routes: IRouteObject = {
     exact: true,
     render: (props: any) =>
       CommonComponent(() => import("../pages/views/my-simple-list"), props),
+  },
+  example_page_extendsList: {
+    name: "example_page_extendsList",
+    path: "/example/page/extendsList",
+    exact: true,
+    render: (props: any) =>
+      CommonComponent(() => import("../pages/views/extends-list"), props),
   }
 };
 

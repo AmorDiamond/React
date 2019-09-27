@@ -9,7 +9,6 @@ import { TableColumn } from "@/framework/component/UdTable/types";
 
 import NormalFilter from "@/framework/ui/UdForm/UdFilterForm/NormalFilter";
 import FormModal from "@component/Modal/FormModal";
-import SelfModel from "@/pages/views/my-normal-list/SelfModel";
 import { testPageData } from "../data";
 
 export interface ITablePageState {
@@ -25,8 +24,6 @@ export class NormalTablePage<
   protected FilterFields: IUdFormFileld[] = [];
   protected PageBtnList: IActionButton<T>[] = [];
   protected Column: TableColumn<T>[] = [];
-  protected ListSelfModel: any;
-  protected selfModalClass: any = "";
 
   constructor(props) {
     super(props);
@@ -54,7 +51,7 @@ export class NormalTablePage<
   public submitData = (btnAjax: IPageAjaxParams) => {
     const callback = ({ isSuccess, data }) => {
       store.changeLoading(btnAjax.loadingKey, false);
-      this.changeSearch({});
+      isSuccess&&this.changeSearch({});
       if (btnAjax.callback) {
         btnAjax.callback({ isSuccess, data });
       }
@@ -67,11 +64,10 @@ export class NormalTablePage<
       pageData,
       tableSearch,
       filterSearch,
-      loading: { all, popupSubmit, other }
+      loading: { all }
     } = store;
     const { title } = this.state;
-    const selfModalProp = store.SelfModal[this.selfModalClass];
-    console.log('selfModalProp',selfModalProp);
+    debugger
     return (
       <div className='page'>
         <div className='page-title'>
@@ -97,8 +93,8 @@ export class NormalTablePage<
           <NormalTable<T>
             submitData={this.submitData}
             columns={this.Column}
-            pageData={pageData}
-            // pageData={testPageData}
+            // pageData={pageData}
+            pageData={testPageData}
             loading={all}
             defaultLoadingKey={"all"}
             changeSearch={this.changeSearch}
@@ -107,7 +103,6 @@ export class NormalTablePage<
             changeModal={store.setPopupInfo}
           />
           <FormModal {...store.Modal} submit={this.submitData} close={store.closePopup} submintloading={false} />
-          <SelfModel {...selfModalProp} submit={this.submitData} close={store.closePopup} submintloading={false} />
         </div>
       </div>
     );

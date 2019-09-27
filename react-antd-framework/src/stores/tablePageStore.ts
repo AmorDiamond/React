@@ -121,7 +121,6 @@ export class tablePageStore {
   /**打开弹出框 */
   @action
   public setPopupInfo = ({ data, action, loadingKey }): void => {
-    debugger
     let popupInfo: any = { visible: true, action, model: data };
     if (action.type == "Form") {
       this.Modal = popupInfo;
